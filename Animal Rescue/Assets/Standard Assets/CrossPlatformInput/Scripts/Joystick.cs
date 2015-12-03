@@ -18,6 +18,7 @@ namespace UnityStandardAssets.CrossPlatformInput
 		public AxisOption axesToUse = AxisOption.Both; // The options for the axes that the still will use
 		public string horizontalAxisName = "Horizontal"; // The name given to the horizontal axis for the cross platform input
 		public string verticalAxisName = "Vertical"; // The name given to the vertical axis for the cross platform input
+		public bool usingJoystick = false; 
 
 		Vector3 m_StartPos;
 		bool m_UseX; // Toggle for using the x axis
@@ -73,6 +74,7 @@ namespace UnityStandardAssets.CrossPlatformInput
 
 		public void OnDrag(PointerEventData data)
 		{
+			usingJoystick = true;
 			Vector3 newPos = Vector3.zero;
 
 			if (m_UseX)
@@ -97,6 +99,7 @@ namespace UnityStandardAssets.CrossPlatformInput
 		{
 			transform.position = m_StartPos;
 			UpdateVirtualAxes(m_StartPos);
+			usingJoystick = false;
 		}
 
 
