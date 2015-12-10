@@ -8,6 +8,7 @@ public class PlayerMove : MonoBehaviour {
 	bool inStealth = false;
 	public Material regMat;
 	public Material stealthMat;
+	public bool seen; 
 	
 	public Renderer rend;
 
@@ -35,6 +36,7 @@ public class PlayerMove : MonoBehaviour {
 			rend.sharedMaterial = regMat;
 		}
 
+		//move the player forward
 		controller.SimpleMove(forward);
 
 		Joystick joystick = GameObject.Find("MobileJoystick").GetComponent<Joystick>();
@@ -45,5 +47,6 @@ public class PlayerMove : MonoBehaviour {
 				transform.Rotate(0, -Input.GetTouch(0).deltaPosition.x * rotationSpeed, 0);
 			}
 		}
+
 	}
 }
