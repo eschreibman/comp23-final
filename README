@@ -1,0 +1,8 @@
+Team: Eliza Schreibman and Maya Saxena
+
+Project: Shelter is a fun and fast paced mobile game in which the player controls Anya, a vigilante pet rescuer dedicated to saving as many pets from kill shelters as possible.
+
+Controls: On the opening screen you have the option of clicking for "natural" scrolling (i.e. camera rotates in the opposite direction as your finger) or "reverse" scrolling (i.e. camera rotates in the direction of your finger). In the game, you control the player with the left joystick (green circle with a white compass-arrow symbol), pick up pets by walking over them, drop off pets by clicking the green "Pet" button, and pressing the stealth button makes the player immune to the extra penalty when seen by a guard, but they are unable to pick up a pet.
+
+How to run: You should build the game with the following scenes, in order: Title screen, Start, End screen. This should make it so the game begins on the title screen scene.
+We have worked really hard to make the UI look great for our mobile testing device, the android Nexus 5, but we have a hunch that this UI will look pretty weird on other devices. In fact, some of the buttons cannot be seen on the computer version or even using unity remote. We have included mobile screenshots on our website in case the UI looks bad (or doesn't appear to be there) on your device.

@@ -1,0 +1,6 @@
+
+All character assets and art, including title screen, player model, pet models, and enemy models, were made and are owned by us.
+
+This games uses Unity's free Standard Asset library in compliance with Unity's EULA; specifically we use the Camera, CrossPlatformInput, Environment, and Utility libraries. 
+
+This game features the song “Skinning” by ERAAS, available under a Creative Commons Attribution-Noncommercial license.
