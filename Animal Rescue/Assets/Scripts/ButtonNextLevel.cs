@@ -3,29 +3,31 @@ using System.Collections;
 
 public class ButtonNextLevel : MonoBehaviour 
 {
-	public Rect button = new Rect(15,15,200,110);
-	public string buttonLabel = "Start game";
-	public string levelToLoad;
+	public Rect startButton;
+	public Rect dirButton;
+	public Rect invButton;
+	string startLabel = "Start game";
+	string dirLabel = "Natural swipe";
+	string invLabel = "Reverse swipe";
+	int fontSize = 20;
+	public string levelToLoad; 
+	public bool swipeDirection = false;
+
+	void Start(){
+		startButton = new Rect(1225,950,200,110); 
+		dirButton = new Rect(1450,960,130,90);
+		invButton = new Rect(1610,960,130,90);
+
+	}
 
 	public void OnGUI(){
-		if (GUI.Button(button, buttonLabel))
+		GUI.skin.button.fontSize = fontSize;
+		if (GUI.Button(startButton, startLabel)){
 			Application.LoadLevel(levelToLoad);
+		} else if (GUI.Button(dirButton, dirLabel)){
+			swipeDirection = true;
+		} else if (GUI.Button(invButton, invLabel)){
+			swipeDirection = false;
+		}
 	}
-	/*public void NextLevelButton(int index)
-	{
-		Application.LoadLevel(index);
-	}
-	
-	public void NextLevelButton(string levelName)
-	{
-		Debug.Log("Load " + levelName + "scene");
-		Application.LoadLevel(levelName);
-	}
-
-	void OnTriggerEnter(Collider other)
-	{
-		Debug.Log("Load start scene");
-		Application.LoadLevel("Start");
-	}
-*/
 }
