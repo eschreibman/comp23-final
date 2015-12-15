@@ -252,6 +252,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 9529ecc3d479da5499993355e6c2cb4f, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9529ecc3d479da5499993355e6c2cb4f, type: 2}
   m_IsPrefabParent: 0
@@ -292,7 +296,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 458820, guid: a8ce95481fc0e44e2bd6a601eea9074a, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 137066, guid: a8ce95481fc0e44e2bd6a601eea9074a, type: 2}
       propertyPath: m_Name
@@ -1092,7 +1096,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 458820, guid: a8ce95481fc0e44e2bd6a601eea9074a, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 137066, guid: a8ce95481fc0e44e2bd6a601eea9074a, type: 2}
       propertyPath: m_Name
@@ -1213,6 +1217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a253e1d263784b76a26bbb7a7ec3de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
   carryingPet: 0
 --- !u!114 &424231824
 MonoBehaviour:
@@ -1225,6 +1230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d48952bd6f03d424995fe864a69ec952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s: -1
   moveSpeed: 10
   rotationSpeed: .400000006
   regMat: {fileID: 2100000, guid: e7e008d3146be450b980da45f15d2b65, type: 2}
@@ -1460,7 +1466,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 458820, guid: a8ce95481fc0e44e2bd6a601eea9074a, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 137066, guid: a8ce95481fc0e44e2bd6a601eea9074a, type: 2}
       propertyPath: m_Name
@@ -2756,7 +2762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a66e1529f90e442d08f29791df06730f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: .00999999978
+  speed: .100000001
   penalty: .0500000007
 --- !u!1 &1229749682
 GameObject:
@@ -3967,7 +3973,7 @@ Transform:
   - {fileID: 630168574}
   - {fileID: 1270120440}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
 --- !u!1 &1819451508
 GameObject:
   m_ObjectHideFlags: 0

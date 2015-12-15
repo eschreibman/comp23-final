@@ -30,7 +30,9 @@ public class SliderDec : MonoBehaviour {
 		}
 
 		if(sMeter.value == 1){
-			print ("game over");
+			//game over
+			Application.LoadLevel("End screen");
+
 		}
 	}
 }

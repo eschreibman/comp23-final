@@ -275,14 +275,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21b5c4196a0140afbc1ba3265a218cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button:
+  startButton:
     serializedVersion: 2
-    x: 960
-    y: 900
-    width: 300
-    height: 150
-  buttonLabel: Start game
+    x: 20
+    y: 20
+    width: 200
+    height: 110
+  dirButton:
+    serializedVersion: 2
+    x: 1450
+    y: 960
+    width: 130
+    height: 90
+  invButton:
+    serializedVersion: 2
+    x: 1610
+    y: 960
+    width: 130
+    height: 90
   levelToLoad: Start
+  swipeDirection: 1
 --- !u!4 &1008280058
 Transform:
   m_ObjectHideFlags: 0
@@ -378,6 +390,47 @@ MonoBehaviour:
   B: {r: .435294122, g: .431372553, b: .4627451, a: 1}
   C: {r: .192406476, g: .19258219, b: .191176474, a: 1}
   speed: 1
+--- !u!1 &1244819721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1244819723}
+  - 114: {fileID: 1244819722}
+  m_Layer: 0
+  m_Name: infoObj
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1244819722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1244819721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0baea88c3d0a248c2a3dd16fedf6ed66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 0
+  holdingScore: 0
+--- !u!4 &1244819723
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1244819721}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 238, y: 133.999115, z: -33.0999985}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
 --- !u!1 &1665258926
 GameObject:
   m_ObjectHideFlags: 0

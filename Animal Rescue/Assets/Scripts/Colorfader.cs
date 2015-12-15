@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class Colorfader : MonoBehaviour {
 
-	public Color A ;
-	public Color B ;
-	public Color C ;
+	public Color A ; //826DDFFF
+	public Color B ; //6F6E76FF
+	public Color C ; //313130FF
 
-	public float speed;
+	public float speed; //1
 	private Image col;
 
 	void Start (){
