@@ -12,6 +12,7 @@ public class EnemyAI : MonoBehaviour
 	public float enemySpeed;
 	public Transform playerPos;
 	public Transform myTransform;
+	public Transform modelTransform;
 	public Renderer myRenderer;
 
 	private Color standColor = Color.yellow;
@@ -21,26 +22,32 @@ public class EnemyAI : MonoBehaviour
 	
 	
 	void Start(){
-		myRenderer = GetComponent<Renderer>();
-		myTransform = GetComponent<Transform>();
+//		myRenderer = GetComponent<Renderer>();
+//		if (myRenderer == null) {
+//			myRenderer = GetComponentInChildren<Renderer>();
+//		}
+//		myTransform = GetComponent<Transform>();
 		//initialized enemy to yellow
-		myRenderer.material.color = standColor;
+//		myRenderer.material.color = standColor;
 	}
 	
 	void Update(){
 		//get distance between self and player
 		distanceToPlayer = Vector3.Distance(playerPos.position, transform.position);
-		
-		if(distanceToPlayer < detectDistance){
-			myRenderer.material.color = detectColor;
-			//set seen on the player to be true
-			script.seen = true;
-		} else if(distanceToPlayer < warningDistance){
-			myRenderer.material.color = warningColor;
-		} else {
-			script.seen = false;
-			myRenderer.material.color = standColor;
+
+		if (myRenderer) {
+			if(distanceToPlayer < detectDistance){
+				myRenderer.material.color = detectColor;
+				//set seen on the player to be true
+				script.seen = true;
+			} else if(distanceToPlayer < warningDistance){
+				myRenderer.material.color = warningColor;
+			} else {
+				script.seen = false;
+				myRenderer.material.color = standColor;
+			}
 		}
+		
 		if(!colliding){
 			enemyWalk();
 		}
@@ -82,6 +89,9 @@ public class EnemyAI : MonoBehaviour
 		}*/
 		enemySpeed = -enemySpeed;
 		transform.Translate(Vector3.forward * enemySpeed);
+		if (modelTransform != null) {
+			modelTransform.Rotate(0, 180, 0);
+		}
 	}
 
 	IEnumerator waiting(){
