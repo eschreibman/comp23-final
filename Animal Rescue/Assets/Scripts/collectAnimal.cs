@@ -32,12 +32,12 @@ public class collectAnimal : MonoBehaviour {
 	void OnTriggerEnter(Collider other){
 		//player will "pick up" pet if they collide and they are not already carrying a pet
 		if(other.gameObject.CompareTag("Cat") && !carryingPet){
-			carryingPet = true;
-			//other.gameObject.SetActive(false);
-			Destroy(other.gameObject);
-			score++;
-			print (score);
-
+			bool st = GameObject.Find("Player").GetComponent<PlayerMove>().inStealth;
+			if (!st){
+				carryingPet = true;
+				Destroy(other.gameObject);
+				score++;
+			}
 		}
 	}
 	void OnTriggerExit(Collider other){
