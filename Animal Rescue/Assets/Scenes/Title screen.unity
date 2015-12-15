@@ -277,8 +277,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton:
     serializedVersion: 2
-    x: 20
-    y: 20
+    x: 1225
+    y: 950
     width: 200
     height: 110
   dirButton:
